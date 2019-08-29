@@ -223,7 +223,7 @@ app.get('/loginAPI',(req,res)=>{
     })
 })
 
-const APIurl5 = "http://localhost:3333/loginAPI"
+const APIurl5 = "https://latestlibrary.herokuapp.com/loginAPI"
 
 app.post('/employeelogin',(req,res)=>{
     var item1 = req.body.euname;
@@ -340,7 +340,7 @@ app.get('/bookall',(req,res)=>{
     });
 });
 
-const APIUrl = "http://localhost:3333/bookall";
+const APIUrl = "https://latestlibrary.herokuapp.com/bookall";
 
 app.get('/books',(req,res)=>{
     request(APIUrl,(error,response,body)=>{
@@ -364,7 +364,7 @@ app.get('/authorall',(req,res)=>{
     });
 });
 
-const APIUrl3 = "http://localhost:3333/authorall";
+const APIUrl3 = "https://latestlibrary.herokuapp.com/authorall";
 
 app.get('/authors',(req,res)=>{
     request(APIUrl3,(error,response,body)=>{
@@ -389,7 +389,7 @@ app.get('/authorone',(req,res)=>{
     });
 });
 
-const APIUrl4 = "http://localhost:3333/authorone";
+const APIUrl4 = "https://latestlibrary.herokuapp.com/authorone";
 
 app.get('/authorsingle/:id',(req,res)=>{
     const x= req.params.id;
@@ -415,7 +415,7 @@ app.get('/bookone',(req,res)=>{
     });
 });
 
-const APIUrl2 = "http://localhost:3333/bookone";
+const APIUrl2 = "https://latestlibrary.herokuapp.com/bookone";
 
 app.get('/booksingle/:id',(req,res)=>{
 
