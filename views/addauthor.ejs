@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Library</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <nav class="navbar-expand-sm" role="navigation">
+      <ul class="nav navbar-nav">
+            <% for(var i=0;i<nav.length;i++){ %>
+                <li>
+                    <a href="<%= nav[i].link %>"><%= nav[i].title %></a>
+                </li>
+            <% } %>
+            <li>
+              <a href="/addbook">Add Book</a>
+          </li>
+          <li>
+                <a href="/addauthor">Add Author</a>
+            </li>
+      </ul>
+       
+     
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Authors
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-12">
+              
+			
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body">
+                
+                <form action="/addauthorAPI" method="POST">
+                    <table class="table">
+                        <tr><td>Author Name:</td><td><input type="text" name="name" class="form-control" id=""></td></tr>
+                        <tr><td>Image:</td><td><input type="text" name="picture" class="form-control" id=""></td></tr>
+                        <tr><td>DoB:</td><td><input type="date" name="DoB" class="form-control" id=""></td></tr>
+                        <tr><td>Place:</td><td><input type="text" name="Place" class="form-control" id=""></td></tr>
+                        <tr><td>Books:</td><td><textarea name="Books" id="" cols="40" rows="3"></textarea></td></tr>
+                        <tr><td></td><td><input type="submit" class="btn btn-primary" value="Submit"></td></tr>
+                    </table>
+                </form>
+          
+        </div>
+      </div>
+
+                                                                      
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+<div class="container" id="footer">
+ 
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    
+  </div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
