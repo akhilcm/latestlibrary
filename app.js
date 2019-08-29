@@ -175,7 +175,7 @@ app.get('/loginAPI',(req,res)=>{
     })
 })
 
-const APIurl5 = "http://localhost:3334/loginAPI"
+const APIurl5 = "https://latestlibraryapp.herokuapp.com//loginAPI"
 
 app.post('/employeelogin',(req,res)=>{
     var item1 = req.body.euname;
@@ -292,7 +292,7 @@ app.get('/bookall',(req,res)=>{
     });
 });
 
-const APIUrl = "http://localhost:3334/bookall";
+const APIUrl = "https://latestlibraryapp.herokuapp.com//bookall";
 
 app.get('/books',(req,res)=>{
     request(APIUrl,(error,response,body)=>{
@@ -316,7 +316,7 @@ app.get('/authorall',(req,res)=>{
     });
 });
 
-const APIUrl3 = "http://localhost:3334/authorall";
+const APIUrl3 = "https://latestlibraryapp.herokuapp.com//authorall";
 
 app.get('/authors',(req,res)=>{
     request(APIUrl3,(error,response,body)=>{
@@ -341,7 +341,7 @@ app.get('/authorone',(req,res)=>{
     });
 });
 
-const APIUrl4 = "http://localhost:3334/authorone";
+const APIUrl4 = "https://latestlibraryapp.herokuapp.com//authorone";
 
 app.get('/authorsingle/:id',(req,res)=>{
     const x= req.params.id;
@@ -367,7 +367,7 @@ app.get('/bookone',(req,res)=>{
     });
 });
 
-const APIUrl2 = "http://localhost:3334/bookone";
+const APIUrl2 = "https://latestlibraryapp.herokuapp.com//bookone";
 
 app.get('/booksingle/:id',(req,res)=>{
 
@@ -453,7 +453,7 @@ app.get('/deleteAPI',(req,res)=>{
     })
 })
 
-const APIurl6 = "http://localhost:3334/deleteAPI"
+const APIurl6 = "https://latestlibraryapp.herokuapp.com//deleteAPI"
 
 app.post('/empdelete',(req,res)=>{
     var item = req.body.euname;
@@ -479,7 +479,7 @@ app.get('/userall',(req,res)=>{
     });
 });
 
-const APIUrl7 = "http://localhost:3334/userall";
+const APIUrl7 = "https://latestlibraryapp.herokuapp.com//userall";
 
 app.get('/viewusers',(req,res)=>{
     request(APIUrl7,(error,response,body)=>{
@@ -510,7 +510,7 @@ app.get('/updateAPI',(req,res)=>{
     })
 })
 
-const APIurl8 = "http://localhost:3334/updateAPI"
+const APIurl8 = "https://latestlibraryapp.herokuapp.com//updateAPI"
 
 app.post('/bookupdate',(req,res)=>{
     var item1 = req.body.title;
@@ -523,5 +523,5 @@ app.post('/bookupdate',(req,res)=>{
 });
 
 app.listen(process.env.PORT || 3334,()=>{
-    console.log("Server running on port:http://localhost:3334");
+    console.log("Server running on port::3334");
 });
