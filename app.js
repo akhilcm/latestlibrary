@@ -11,24 +11,24 @@ app.use(Express.static(__dirname+"/public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.use(function (req, res, next) {
+// app.use(function (req, res, next) {
 
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://lmsangular.herokuapp.com' );
+//     // Website you wish to allow to connect
+//     res.setHeader('Access-Control-Allow-Origin', 'https://lmsangular.herokuapp.com' );
 
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+//     // Request methods you wish to allow
+//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+//     // Request headers you wish to allow
+//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
 
-    // Set to true if you need the website to include cookies in the requests sent
-    // to the API (e.g. in case you use sessions)
-    res.setHeader('Access-Control-Allow-Credentials', true);
+//     // Set to true if you need the website to include cookies in the requests sent
+//     // to the API (e.g. in case you use sessions)
+//     res.setHeader('Access-Control-Allow-Credentials', true);
 
-    // Pass to next layer of middleware
-    next();
-});
+//     // Pass to next layer of middleware
+//     next();
+// });
 
 Mongoose.connect("mongodb://localhost:27017/latestlibrarydb");
 // Mongoose.connect("mongodb+srv://mongodb:mongodb@mycluster-ucvz5.mongodb.net/LibraryApp?retryWrites=true&w=majority");
@@ -76,130 +76,82 @@ nav= [
 ];
 
 book=[{
-    'title': 'THE JURASSIC ADVENTURE',
-    'author': 'ARHAM BANTHIA',
-    'publisher': 'Blue Rose',
-    'dop': '25-02-2019',
-    'distributer': 'Blue',
-    'price': '249',
-    'description': 'My Jurassic adventure',
-    'picture':'/images/THE-JURASSIC-ADVENTURE1-321x500.jpg'
-},
-{
-    'title': 'Firewall',
-    'author': 'ANUP KUMAR MANDAL',
-    'publisher': 'Blue Rose',
-    'dop': '25/02/2019',
-    'distributer': 'Blue',
-    'price': '249',
-    'description': 'In India, every year, hundreds of people are killed and seriously...',
-    'picture':'/images/Firewall1-325x500.jpg'
-
-},
-{
-    'title': 'OUSHADHASARVASWAM',
-    'author': 'THAHIMON. P.A',
-    'publisher': 'Blue Rose',
-    'dop': '25/08/2019',
-    'distributer': 'Blue',
-    'price': '1200',
-    'description': 'Oushadhasarvaswam is first of its kind on modern medicine....',
-    'picture':'/images/o.jpg'
-
-},
-{
-    'title': 'The Poor Grandmaster',
-    'author': 'Sumitendray Singh',
-    'publisher': 'Blue Rose',
-    'dop': '15/02/2019',
-    'distributer': 'Blue',
-    'price': '100',
-    'description': 'This book takes you through the life of a poor.....',
-    'picture':'/images/The-Poor-Grandmaster1-325x500.jpg'
-
-},
-{
-    'title': 'PRODUCTIVITY & Global Management Practices',
-    'author': 'RAMESH K SHAH',
-    'publisher': 'Blue Rose',
-    'dop': '05/12/2019',
-    'distributer': 'Blue',
-    'price': '249',
-    'description': 'My Jurassic adventure',
-    'picture':'/images/prod.jpg'
-
-},
-{
-    'title': 'Mindful Eating',
-    'author': 'Priti sandeep gaglani',
-    'publisher': 'Blue Rose',
-    'dop': '25/02/2019',
-    'distributer': 'Blue',
-    'price': '499',
-    'description': 'The book focuses on Lifestyle Modification, rather than only low calorie eating.',
-    'picture':'/images/mind.jpg'
-},
-{
-    'title': 'One Action — Towards women’s dreams and ambitions',
-    'author': 'Sanya Khurana',
-    'publisher': 'Blue Rose',
-    'dop': '25/08/2019',
-    'distributer': 'Blue',
-    'price': '225',
-    'description': 'As a teenager, Sanya Khurana had very low self-esteem and was disgusted ....',
-    'picture':'/images/oneaction.jpg'
-},
-{
-    'title': 'Life in Pieces',
-    'author': 'Sonal Vashisht',
-    'publisher': 'Blue Rose',
-    'dop': '25/03/2019',
-    'distributer': 'Blue',
-    'price': '175',
-    'description': 'The story is truly a great example of a journey called ‘Life’',
-    'picture':'/images/life in .jpg',
-},
-{ 
-    'title': 'Love-Tennis',
-    'author': 'Jitender kumar',
-    'publisher': 'Blue Rose',
-    'dop': '25/09/2019',
-    'distributer': 'Blue',
-    'price': '175',
-    'description': 'Will love win again as always',
-    'picture':'/images/love tennis.jpg'
+    'title':'Buried thoughts',
+    'picture':'/images/buried.jpg',
+    'author':'Joseph Annamkutty Jose',
+    'publisher':'DC Books',
+    'DoP':'02-08-2016',
+    'distributer':'DC',
+    'price':230,
+    'desc':'A first thought from Joseph'
+},{
+    'title':'Deivathinde Charanmar',
+    'picture':'/images/deivatinde.jpg',
+    'author':'Joseph Annamkutty Jose',
+    'publisher':'DC Books',
+    'DoP':'26-05-2019',
+    'distributer':'DC',
+    'price':190,
+    'desc':'A second thought from Joseph'
+},{
+    'title':'Wings Of Fire',
+    'picture':'/images/wingsfire.jpg',
+    'author':'APJ Abdul Kalam',
+    'publisher':'DC Books',
+    'DoP':'26-05-2010',
+    'distributer':'DC',
+    'price':150,
+    'desc':'Initial days of my life by APJ'
+},{
+    'title':'The Subtle Art Of Not Giving a F**k',
+    'picture':'/images/thesubtleart.jpg',
+    'author':'Mark Manson',
+    'publisher':'DC Books',
+    'DoP':'13-02-2011',
+    'distributer':'DC',
+    'price':320,
+    'desc':'Balancing life'
+},{
+    'title':'Rich Dad Poor Dad',
+    'picture':'/images/richdad.jpg',
+    'author':'Rober TK',
+    'publisher':'DC Books',
+    'DoP':'26-05-2019',
+    'distributer':'DC',
+    'price':290,
+    'desc':'A financial knowledge'
 }];
 
 author=[{
-    'name':'Jitender kumar',
-    'picture':'/images/Jitender Kumar.jpg',
-    'DoB':'1 September 1990 ',
-    'Place':'Khairthal, Alwar, India',
-    'Books': 'Love-Tennis'
+    'name':'Joseph Annamkutty Jose',
+    'picture':'/images/joseph.jpg',
+    'DoB':'18 July 1988',
+    'Place':'Kerala, India',
+    'Books': ['Buried thoughts','Deivathinde Charanmar']
 },{
-    'name':'Sonal Vashisht',
-    'picture':'/images/K_Sonal_Choudhary.jpg',
+    'name':'JK Rowling',
+    'picture':'/images/rowling.jpg',
     'DoB':'31 July 1965',
-    'Place':'Gurugram, Haryana',
-    'Books': 'Life in Pieces'
+    'Place':'Scotland',
+    'Books': ['Harry Potter','the casual vacany','fantastic beasts']
 },{
-    'name':'Sanya Khurana',
-    'picture':'/images/sanya-malhotr-aa_d.jpg',
-    'DoB':'18 November 1987',
-    'Place':'Chandigarh, India',
-    'Books': 'One Action'
+    'name':'APJ Abdul Kalam',
+    'picture':'/images/kalam.jpg',
+    'DoB':'15 October 1931',
+    'Place':'Rameswaram, India',
+    'Books': ['Ignited Minds','India 2020','The turning Point']
 },{
-    'name':'Priti sandeep gaglani',
-    'picture':'/images/pritiimage.jpg',
-    'DoB':'8 April 1989',
+    'name':'Robert T K',
+    'picture':'/images/robert.jpeg',
+    'DoB':'8 April 1947',
     'Place':'United States',
-    'Books': 'Mindful Eating'
+    'Books': ['Cashflow Quadrant','The Business School']
 },{
-    'name':'ANUP KUMAR MANDAL',
-    'picture':'/images/anup.jpeg',
+    'name':'Mark Manson',
+    'picture':'/images/manson.jpg',
     'DoB':'9 March 1984',
-    'place':'India',
-    'books': 'Firewall'
+    'Place':'United States',
+    'Books': ['The subtle art of Not Giving F**k','Everything is f**ked']
 }];
 
 app.get('/',(req,res)=>{
@@ -223,7 +175,7 @@ app.get('/loginAPI',(req,res)=>{
     })
 })
 
-const APIurl5 = "https://latestlibrary.herokuapp.com/loginAPI"
+const APIurl5 = "http://localhost:3334/loginAPI"
 
 app.post('/employeelogin',(req,res)=>{
     var item1 = req.body.euname;
@@ -340,7 +292,7 @@ app.get('/bookall',(req,res)=>{
     });
 });
 
-const APIUrl = "https://latestlibrary.herokuapp.com/bookall";
+const APIUrl = "http://localhost:3334/bookall";
 
 app.get('/books',(req,res)=>{
     request(APIUrl,(error,response,body)=>{
@@ -364,7 +316,7 @@ app.get('/authorall',(req,res)=>{
     });
 });
 
-const APIUrl3 = "https://latestlibrary.herokuapp.com/authorall";
+const APIUrl3 = "http://localhost:3334/authorall";
 
 app.get('/authors',(req,res)=>{
     request(APIUrl3,(error,response,body)=>{
@@ -389,7 +341,7 @@ app.get('/authorone',(req,res)=>{
     });
 });
 
-const APIUrl4 = "https://latestlibrary.herokuapp.com/authorone";
+const APIUrl4 = "http://localhost:3334/authorone";
 
 app.get('/authorsingle/:id',(req,res)=>{
     const x= req.params.id;
@@ -415,7 +367,7 @@ app.get('/bookone',(req,res)=>{
     });
 });
 
-const APIUrl2 = "https://latestlibrary.herokuapp.com/bookone";
+const APIUrl2 = "http://localhost:3334/bookone";
 
 app.get('/booksingle/:id',(req,res)=>{
 
@@ -479,7 +431,97 @@ app.get('/addauthor',(req,res)=>{
     res.render('addauthor');
 });
 
+app.get('/deleteuser',(req,res)=>{
+    res.render('deleteuser');
+});
 
-app.listen(process.env.PORT || 3333,()=>{
-    console.log("Server running on port:http://localhost:3333");
+//An API to delete employee
+
+app.get('/deleteAPI',(req,res)=>{
+    var item= req.query.euname;
+
+    var result = UserModel.deleteOne({euname:item},(error,data)=>{
+        if(error)
+        {
+            throw error;
+            res.send(error);
+        }
+        else
+        {
+            res.send(data);
+        }
+    })
+})
+
+const APIurl6 = "http://localhost:3334/deleteAPI"
+
+app.post('/empdelete',(req,res)=>{
+    var item = req.body.euname;
+
+    request(APIurl6+"/?euname="+item,(error,response,body)=>{
+
+        res.send("<script>alert('User Deleted')</script><script>window.location.href='/deleteuser'</script>");
+
+    })
+});
+
+app.get('/userall',(req,res)=>{
+    var result = UserModel.find((error,data)=>{
+        if(error)
+        {
+            throw error;
+            res.send(error);
+        }
+        else
+        {
+            res.send(data);
+        }
+    });
+});
+
+const APIUrl7 = "http://localhost:3334/userall";
+
+app.get('/viewusers',(req,res)=>{
+    request(APIUrl7,(error,response,body)=>{
+        var user = JSON.parse(body);
+        res.render('viewusers',{user:user,title:'Users'});
+    });
+    
+});
+
+app.get('/updateprice',(req,res)=>{
+    res.render('updateprice');
+});
+
+//An API to update price
+
+app.get('/updateAPI',(req,res)=>{
+    var item1 = req.query.title;
+    var result = BookModel.updateOne({title:item1},{$set:{price:req.query.price}},(error,data)=>{
+        if(error)
+        {
+            throw error;
+            res.send(error);
+        }
+        else
+        {
+            res.send(data);
+        }
+    })
+})
+
+const APIurl8 = "http://localhost:3334/updateAPI"
+
+app.post('/bookupdate',(req,res)=>{
+    var item1 = req.body.title;
+    var item2 = req.body.price;
+    request(APIurl8+"/?title="+item1+"&&price="+item2,(error,response,body)=>{
+
+        res.send("<script>alert('Book Price Updated')</script><script>window.location.href='/updateprice'</script>");
+
+    })
+});
+
+app.listen(process.env.PORT || 3334,()=>{
+    console.log("Server running on port:http://localhost:3334");
 });
